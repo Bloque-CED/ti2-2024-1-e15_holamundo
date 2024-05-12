@@ -7,4 +7,4 @@ lazy val root = (project in file("."))
     name := "Integrate2"
   )
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.18" % Test
+libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test
