@@ -1,5 +1,6 @@
 import munit.FunSuite
 
+//Diferentes pruebas unitarias
 class CheckSumTest extends FunSuite {
   val checkSumCalculator = new SimpleCheckSumCalculator()
 
@@ -33,5 +34,5 @@ class CheckSumTest extends FunSuite {
     val expectedChecksum = numbers.map(_.toInt).sum
     assertEquals(checkSumCalculator.calculateChecksum(numbers), expectedChecksum)
   }
-  
+
 }
