@@ -52,31 +52,30 @@
 
 ### Clase DataGenerator
 
-#### Método generateData(int size)
-- **Caso de prueba 1**: Generación de datos de categoría de tamaño "Toy"
-    - Entrada: `category = "Toy"`
-    - Resultado esperado: Una cadena de 99 caracteres generada aleatoriamente
-- **Caso de prueba 2**: Generación de datos de categoría de tamaño "Pequeño"
-    - Entrada: `category = "Small"`
-    - Resultado esperado: Una cadena de 9999 caracteres generada aleatoriamente
-- **Caso de prueba 3**: Generación de datos de categoría de tamaño "Mediano"
-    - Entrada: `category = "Medium"`
-    - Resultado esperado: Una cadena de 99999 caracteres generada aleatoriamente
-- **Caso de prueba 4**: Generación de datos de categoría de tamaño "Grande"
-    - Entrada: `category = "Large"`
-    - Resultado esperado: Una cadena de 1000000 caracteres generada aleatoriamente
-- **Caso de prueba 5**: Generación de datos de categoría de tamaño invalida
-    - Entrada: `category = "Invalid"`
-    - Resultado esperado: Una cadena vacía
-- **Caso de prueba 6**: Generación de datos de tamaño negativo
-    - Entrada: `size = -100`
-    - Resultado esperado: Una cadena vacía
-- **Caso de prueba 7**: Generación de datos de tamaño cero
-    - Entrada: `size = 0`
-    - Resultado esperado: Una cadena vacía
-- **Caso de prueba 8**: Generación de datos de tamaño arbitrario
-    - Entrada: `size = 12345`
-    - Resultado esperado: Una cadena de 12345 caracteres generada aleatoriamente
+#### Método generateData(String name, String category)
+- **Caso de prueba 1**: Generación de archivo con datos de categoría de tamaño "Toy"
+  - Entrada: `name = "ToyData", category = "Toy"`
+  - Resultado esperado: Se crea un archivo "ToyData.txt" en el directorio "src/main/resources/data/" con una cadena de 99 caracteres generada aleatoriamente
+- **Caso de prueba 2**: Generación de archivo con datos de categoría de tamaño "Pequeño"
+  - Entrada: `name = "SmallData", category = "Small"`
+  - Resultado esperado: Se crea un archivo "SmallData.txt" en el directorio "src/main/resources/data/" con una cadena de 9999 caracteres generada aleatoriamente
+- **Caso de prueba 3**: Generación de archivo con datos de categoría de tamaño "Mediano"
+  - Entrada: `name = "MediumData", category = "Medium"`
+  - Resultado esperado: Se crea un archivo "MediumData.txt" en el directorio "src/main/resources/data/" con una cadena de 99999 caracteres generada aleatoriamente
+- **Caso de prueba 4**: Generación de archivo con datos de categoría de tamaño "Grande"
+  - Entrada: `name = "LargeData", category = "Large"`
+  - Resultado esperado: Se crea un archivo "LargeData.txt" en el directorio "src/main/resources/data/" con una cadena de 1000000 caracteres generada aleatoriamente
+
+#### Método generateData(String name, int length)
+- **Caso de prueba 6**: Generación de archivo con datos de tamaño especificado
+  - Entrada: `name = "SpecifiedData", length = 12345`
+  - Resultado esperado: Se crea un archivo "SpecifiedData.txt" en el directorio "src/main/resources/data/" con una cadena de 12345 caracteres generada aleatoriamente
+- **Caso de prueba 7**: Generación de archivo con datos de tamaño negativo
+  - Entrada: `name = "NegativeData", length = -100`
+  - Resultado esperado: Se crea un archivo "NegativeData.txt" en el directorio "src/main/resources/data/" con una cadena vacía
+- **Caso de prueba 8**: Generación de archivo con datos de tamaño cero
+  - Entrada: `name = "EmptyData", length = 0`
+  - Resultado esperado: Se crea un archivo "EmptyData.txt" en el directorio "src/main/resources/data/" con una cadena vacía
 
 ### Pruebas de rendimiento
 

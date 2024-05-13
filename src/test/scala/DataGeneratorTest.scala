@@ -36,8 +36,20 @@ class DataGeneratorTest extends FunSuite {
   }
  
   test("Generate data file with specified length") {
-    dataGenerator.generateData("SpecifiedData", 100)
+    dataGenerator.generateData("SpecifiedData", 12345)
     val data = dataLoader.loadData("src/main/resources/data/SpecifiedData.txt")
-    assert(data.length == 100)
+    assert(data.length == 12345)
+  }
+   
+  test("Generate data file with negative length") {
+    dataGenerator.generateData("NegativeData", -12345)
+    val data = dataLoader.loadData("src/main/resources/data/NegativeData.txt")
+    assert(data.isEmpty)
+  }
+  
+  test("Generate data file with zero length") {
+    dataGenerator.generateData("ZeroData", 0)
+    val data = dataLoader.loadData("src/main/resources/data/ZeroData.txt")
+    assert(data.isEmpty)
   }
 }
