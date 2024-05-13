@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="bcf14dc1-cf45-428f-8621-577e3e370fef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/CRCTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/CRCTest.scala" afterDir="false" />
     </list>
+=======
+    <list default="true" id="bcf14dc1-cf45-428f-8621-577e3e370fef" name="Changes" comment="" />
+>>>>>>> 66edde6bb1f4cb069cb98033321fcaab3ce9029e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +64,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/gomit/Desktop/INTE/ti2-2024-1-e15_holamundo",
+=======
+>>>>>>> 66edde6bb1f4cb069cb98033321fcaab3ce9029e
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -153,8 +160,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715471389229</updated>
+<<<<<<< HEAD
       <workItem from="1715471390298" duration="9969000" />
       <workItem from="1715565379638" duration="1772000" />
+=======
+      <workItem from="1715471390298" duration="14030000" />
+>>>>>>> 66edde6bb1f4cb069cb98033321fcaab3ce9029e
     </task>
     <servers />
   </component>
