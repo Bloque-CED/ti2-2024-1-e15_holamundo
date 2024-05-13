@@ -1,3 +1,4 @@
+import algorithms.SimpleCheckSumCalculator
 import munit.FunSuite
 
 //Diferentes pruebas unitarias
