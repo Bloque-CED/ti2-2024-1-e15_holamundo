@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assignment-invitations/2c99d892c0119a866f303ad913cf5ed8/status)
-
 ## Tarea Integradora 2 
 **Objetivos Terminales**
 
