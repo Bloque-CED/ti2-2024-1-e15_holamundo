@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="bcf14dc1-cf45-428f-8621-577e3e370fef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/CRCTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/CRCTest.scala" afterDir="false" />
     </list>
-=======
-    <list default="true" id="bcf14dc1-cf45-428f-8621-577e3e370fef" name="Changes" comment="" />
->>>>>>> 66edde6bb1f4cb069cb98033321fcaab3ce9029e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,9 +41,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
+  <component name="ProjectColorInfo">
+    { &quot;associatedIndex&quot;: 8 }
+  </component>
   <component name="ProjectId" id="2gLKOmqFrrBxtdgS74NsiOxoxtl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -56,26 +52,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-<<<<<<< HEAD
-    "last_opened_file_path": "C:/Users/gomit/Desktop/INTE/ti2-2024-1-e15_holamundo",
-=======
->>>>>>> 66edde6bb1f4cb069cb98033321fcaab3ce9029e
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <![CDATA[
+    {
+      "keyToString": {
+        "ASKED_ADD_EXTERNAL_FILES": "true",
+        "RunOnceActivity.OpenProjectViewOnStart": "true",
+        "RunOnceActivity.ShowReadmeOnStart": "true",
+        "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+        "WebServerToolWindowFactoryState": "false",
+        "git-widget-placeholder": "main",
+        "node.js.detected.package.eslint": "true",
+        "node.js.detected.package.tslint": "true",
+        "node.js.selected.package.eslint": "(autodetect)",
+        "node.js.selected.package.tslint": "(autodetect)",
+        "nodejs_package_manager_path": "npm",
+        "vue.rearranger.settings.migration": "true"
+      }
+    }
+    ]]>
+  </component>
   <component name="RunManager" selected="MUnit.CheckSumTest">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ti2-2024-1-e15_holamundo" />
@@ -160,12 +156,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715471389229</updated>
-<<<<<<< HEAD
-      <workItem from="1715471390298" duration="9969000" />
-      <workItem from="1715565379638" duration="1772000" />
-=======
       <workItem from="1715471390298" duration="14030000" />
->>>>>>> 66edde6bb1f4cb069cb98033321fcaab3ce9029e
+      <workItem from="1715565379638" duration="1772000" />
     </task>
     <servers />
   </component>
