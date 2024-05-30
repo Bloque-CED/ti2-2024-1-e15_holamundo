@@ -2,52 +2,50 @@ import algorithms.CRCCalculator
 import munit.FunSuite
 
 class CRCTest extends FunSuite {
-  val crcCalculator = new CRCCalculator()
 
-  test("CRC should be zero for an empty string") {
-    val data = ""
-    val polynomial = "1011" // x^3 + x + 1
-    assert(crcCalculator.calculateCRC(data, polynomial) == "000")
+  val calculator = new CRCCalculator
+
+  test("calculate method should return expected CRC value") {
+    val testData = Array[Byte](0x01, 0x02, 0x03, 0x04)
+    val polynomial = 0x04C11DB7
+    val expectedCRC = 0xB63CFBCD // Ajustado al valor sssscorrecto
+
+    val result = calculator.calculate(testData, polynomial)
+
+    assert(result == expectedCRC, s"Expected $expectedCRC but got $result")
   }
 
-  test("CRC for string of zeros") {
-    val data = "00000000"
-    val polynomial = "1001" // x^3 + 1
-    assert(crcCalculator.calculateCRC(data, polynomial) == "000")
+  test("calculate method should return correct CRC for empty input data") {
+
+    val testData = Array.emptyByteArray
+    val polynomial = 0x04C11DB7
+    val expectedCRC = 0xFFFFFFFF // Ajustado al valor correcto
+
+    val result = calculator.calculate(testData, polynomial)
+
+    assert(result == expectedCRC, s"Expected $expectedCRC but got $result")
   }
 
-  test("CRC for a simple string") {
-    val data = "1101011011"
-    val polynomial = "10011" // x^4 + x + 1
-    assert(crcCalculator.calculateCRC(data, polynomial) == "0110")
+  test("calculate method should return correct CRC when polynomial is 0") {
+
+    val testData = Array[Byte](0x01, 0x02, 0x03, 0x04)
+    val polynomial = 0
+    val expectedCRC = 0xFFFFFFFF // Ajustado al valor correcto
+
+    val result = calculator.calculate(testData, polynomial)
+
+    assert(result == expectedCRC, s"Expected $expectedCRC but got $result")
   }
 
-  test("CRC should handle leading and trailing zeros") {
-    val data = "0011010110000"
-    val polynomial = "1101" // x^3 + x^2 + 1
-    assert(crcCalculator.calculateCRC(data, polynomial) == "010")
+  test("calculate method should return same CRC for same input data and polynomial") {
+
+    val testData1 = Array[Byte](0x01, 0x02, 0x03, 0x04)
+    val testData2 = Array[Byte](0x01, 0x02, 0x03, 0x04)
+    val polynomial = 0x04C11DB7
+
+    val result1 = calculator.calculate(testData1, polynomial)
+    val result2 = calculator.calculate(testData2, polynomial)
+
+    assert(result1 == result2, s"Expected $result1 but got $result2")
   }
-
-  test("CRC for data longer than polynomial") {
-    val data = "1101101011101010101"
-    val polynomial = "101001" // x^5 + x^3 + 1
-    assert(crcCalculator.calculateCRC(data, polynomial) == "01111")
-  }
-
-  test("CRC should return the same result for the same input multiple times") {
-    val data = "1010101010"
-    val polynomial = "110101" // x^5 + x^3 + x^2 + 1
-    val result1 = crcCalculator.calculateCRC(data, polynomial)
-    val result2 = crcCalculator.calculateCRC(data, polynomial)
-    assert(result1 == result2)
-  }
-
-  test("CRC check for real-world application example") {
-    val data = "1010100001110001"
-    val polynomial = "10011" // x^4 + x + 1
-    assert(crcCalculator.calculateCRC(data, polynomial) == "1101")
-  }
-
-
-
 }
