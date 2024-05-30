@@ -1,7 +1,7 @@
 import munit.FunSuite
 import data.DataGenerator
 
-class DataGeneratorTest extends FunSuite {
+class  DataGeneratorTest extends FunSuite {
 
   val dataGenerator = new DataGenerator()
 

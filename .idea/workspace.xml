@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bcf14dc1-cf45-428f-8621-577e3e370fef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/algorithms/CRCCalculator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/algorithms/CRCCalculator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/data/DataGenerator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/data/DataGenerator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/data/DataLoader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/data/DataLoader.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/data/DataWriter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/data/DataWriter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/CRCTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/CRCTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/data/DataWriter.scala" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/DataGeneratorTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/DataGeneratorTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,9 +160,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DataLoaderTest" type="MUnitRunConfiguration" factoryName="MUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="Integrate2" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="workingDirectory" value="C:\Users\gomit\Desktop\INTE\ti2-2024-1-e15_holamundo" />
+      <option name="testClassPath" value="DataLoaderTest" />
+      <option name="workingDirectory" value="C:\Users\gomit\Desktop\INTE\ti2-2024-1-e15_holamundo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataWriterTest" type="MUnitRunConfiguration" factoryName="MUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="Integrate2" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="workingDirectory" value="C:\Users\gomit\Desktop\INTE\ti2-2024-1-e15_holamundo" />
+      <option name="testClassPath" value="DataWriterTest" />
+      <option name="workingDirectory" value="C:\Users\gomit\Desktop\INTE\ti2-2024-1-e15_holamundo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="MUnit.DataGeneratorTest" />
+        <item itemvalue="MUnit.DataWriterTest" />
+        <item itemvalue="MUnit.DataLoaderTest" />
         <item itemvalue="MUnit.CRCTest" />
         <item itemvalue="MUnit.CheckSumTest" />
       </list>
@@ -186,7 +236,7 @@
       <workItem from="1715471390298" duration="14030000" />
       <workItem from="1715565379638" duration="1772000" />
       <workItem from="1716247622809" duration="4220000" />
-      <workItem from="1716587121215" duration="9966000" />
+      <workItem from="1716587121215" duration="14776000" />
     </task>
     <servers />
   </component>
