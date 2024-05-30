@@ -4,48 +4,50 @@ import munit.FunSuite
 class CRCTest extends FunSuite {
   val crcCalculator = new CRCCalculator()
 
-
-  test("CRC should calculate the correct CRC for an empty string") {
-    val polynomial = 0xB // x^3 + x + 1 = 1011
-    val degree = 3
-
-    assert(crcCalculator.calculate("", degree, polynomial) == 0x0)
+  test("CRC should be zero for an empty string") {
+    val data = ""
+    val polynomial = "1011" // x^3 + x + 1
+    assert(crcCalculator.calculateCRC(data, polynomial) == "000")
   }
 
-  test("CRC should calculate the correct CRC for a short string") {
-    val polynomial = 0xB // x^3 + x + 1 = 1011
-    val degree = 3
-    val input = "hello"
-    val expectedCRC = 0x6D
-
-    assert(crcCalculator.calculate(input, degree, polynomial) == expectedCRC)
+  test("CRC for string of zeros") {
+    val data = "00000000"
+    val polynomial = "1001" // x^3 + 1
+    assert(crcCalculator.calculateCRC(data, polynomial) == "000")
   }
 
-  test("CRC should calculate the correct CRC for a long string") {
-    val polynomial = 0x15 // x^4 + x^3 + 1 = 10101
-    val degree = 4
-    val input = "This is a very long string for testing CRC calculation."
-    val expectedCRC = 0xE5
-
-    assert(crcCalculator.calculate(input, degree, polynomial) == expectedCRC)
+  test("CRC for a simple string") {
+    val data = "1101011011"
+    val polynomial = "10011" // x^4 + x + 1
+    assert(crcCalculator.calculateCRC(data, polynomial) == "0110")
   }
 
-  test("CRC should calculate the correct CRC for a low-degree polynomial") {
-    val polynomial = 0x05 // x^2 + 1 = 101
-    val degree = 2
-    val input = "12345678"
-    val expectedCRC = 0x6D
-
-    assert(crcCalculator.calculate(input, degree, polynomial) == expectedCRC)
+  test("CRC should handle leading and trailing zeros") {
+    val data = "0011010110000"
+    val polynomial = "1101" // x^3 + x^2 + 1
+    assert(crcCalculator.calculateCRC(data, polynomial) == "010")
   }
 
-  test("CRC should calculate the correct CRC for a high-degree polynomial") {
-    val polynomial = 0x8301 // x^8 + x^7 + x^6 + x^4 + x^2 + 1 = 100000111
-    val degree = 8
-    val input = "This is another long string for testing CRC with a high-degree polynomial."
-    val expectedCRC = 0x4F
-
-    assert(crcCalculator.calculate(input, degree, polynomial) == expectedCRC)
+  test("CRC for data longer than polynomial") {
+    val data = "1101101011101010101"
+    val polynomial = "101001" // x^5 + x^3 + 1
+    assert(crcCalculator.calculateCRC(data, polynomial) == "01111")
   }
+
+  test("CRC should return the same result for the same input multiple times") {
+    val data = "1010101010"
+    val polynomial = "110101" // x^5 + x^3 + x^2 + 1
+    val result1 = crcCalculator.calculateCRC(data, polynomial)
+    val result2 = crcCalculator.calculateCRC(data, polynomial)
+    assert(result1 == result2)
+  }
+
+  test("CRC check for real-world application example") {
+    val data = "1010100001110001"
+    val polynomial = "10011" // x^4 + x + 1
+    assert(crcCalculator.calculateCRC(data, polynomial) == "1101")
+  }
+
+
 
 }

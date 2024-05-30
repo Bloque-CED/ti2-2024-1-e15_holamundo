@@ -1,59 +1,36 @@
 package data
+import scala.util.Random
 
-class DataGenerator {
+  class DataGenerator {
+    def generateData(size: Int): Array[Byte] = {
+      val data = new Array[Byte](size)
+      Random.nextBytes(data)
+      data
+    }
 
-  // Constants for category sizes
-  private final val Toy = 99
-  private final val Small = 9999
-  private final val Medium = 99999
-  private final val Large = 1000000
-  
-  // Default path for data files
-  private final val defaultPath = "src/main/resources/data/"
-  
-  // Data writer
-  private final val writer = new DataWriter()
+    // Genera una cadena de caracteres con longitud variable dentro de un rango específico
+    def generateString(minSize: Int, maxSize: Int): String = {
+      val source = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+      val size = Random.nextInt(maxSize - minSize + 1) + minSize
+      (1 to size).map(_ => source(Random.nextInt(source.length))).mkString
+    }
 
-  /**
-   * Generate data file with predetermined category size
-   * @param name File name
-   * @param category Category name
-   */
-  def generateData(name: String, category: String): Unit = {
-    writer.writeData(defaultPath + name + ".txt", generate(category))
-  }
-  
-  /**
-   * Generate data file with specified length
-   * @param name File name
-   * @param length Length of the data
-   */
-  def generateData(name : String, length: Int): Unit = {
-    writer.writeData(defaultPath + name + ".txt", generate(length))
-  }
+    // Selecciona el tamaño del Array o String según las categorías
+    def chooseSizeRange(category: String): (Int, Int) = {
+      category match {
+        case "Toy" => (1, 101) // n < 102
+        case "Small" => (102, 9999) // 102 ≤ n < 10,000
+        case "Medium" => (10000, 99999) // 10,000 ≤ n < 100,000
+        case "Large" => (100000, 999999) // 100,000 ≤ n < 1,000,000
+        case _ => throw new IllegalArgumentException("Invalid category size")
+      }
+    }
 
-  /**
-   * Generate string with random data of a given length
-   * @param length Length of the data
-   * @return Random data
-   */
-  private def generate(length: Int): String = {
-    val r = new scala.util.Random
-    (1 to length).map(_ => r.nextInt(256).toChar).mkString
-  }
-
-  /**
-   * Generate string with random data of a given category length
-   * @param category Category name
-   * @return Random data
-   */
-  private def generate(category: String): String = {
-    category match {
-      case "Toy" => generate(Toy)
-      case "Small" => generate(Small)
-      case "Medium" => generate(Medium)
-      case "Large" => generate(Large)
-      case _ => ""
+    // Genera una cadena de caracteres aleatoria según la categoría y la convierte a bytes
+    def generateStringData(category: String): Array[Byte] = {
+      val (minSize, maxSize) = chooseSizeRange(category)
+      val randomString = generateString(minSize, maxSize)
+      randomString.getBytes("UTF-8")
     }
   }
-}
+

@@ -1,15 +1,17 @@
 package data
 
+import java.nio.file.{Paths, Files}
+import java.nio.charset.StandardCharsets
+
 class DataLoader {
-  
-  /**
-   * Load data from a file
-   * @param path the path to the file
-   * @return the data in the file
-   */
-  def loadData(path : String): String = {
-    val source = scala.io.Source.fromFile(path)
-    val lines = try source.mkString finally source.close()
-    lines
+
+  // Carga datos binarios directamente desde un archivo
+  def loadBinaryData(filePath: String): Array[Byte] = {
+    Files.readAllBytes(Paths.get(filePath))
+  }
+
+  // Carga datos de texto desde un archivo y los devuelve directamente como bytes
+  def loadTextDataAsBytes(filePath: String): Array[Byte] = {
+    Files.readAllBytes(Paths.get(filePath))
   }
 }

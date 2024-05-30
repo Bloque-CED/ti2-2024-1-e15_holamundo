@@ -1,55 +1,31 @@
 import munit.FunSuite
+import data.DataGenerator
 
 class DataGeneratorTest extends FunSuite {
-  
-  // Las entradas están categorizadas de acuerdo a su tamaño así: 
-  //Toy, n<10^2  set value = 99
-  //Small, 10^2<=n<10^4 set value = 9999
-  //Medium, 10^4<=n<10^5 set value = 99999
-  //Large, n<10^6 set value = 1000000
-  
-  val dataGenerator = new data.DataGenerator()
-  val dataLoader = new data.DataLoader()
-  
-  test("Generate data file with Toy size") {
-    dataGenerator.generateData("ToyData", "Toy")
-    val data = dataLoader.loadData("src/main/resources/data/ToyData.txt")
-    assert(data.length == 99)
-  }
-  
-  test("Generate data file with Small size") {
-    dataGenerator.generateData("SmallData", "Small")
-    val data = dataLoader.loadData("src/main/resources/data/SmallData.txt")
-    assert(data.length == 9999)
-  }
- 
-  test("Generate data file with Medium size") {
-    dataGenerator.generateData("MediumData", "Medium")
-    val data = dataLoader.loadData("src/main/resources/data/MediumData.txt")
-    assert(data.length == 99999)
+
+  val dataGenerator = new DataGenerator()
+
+  test("Generate byte array with specific size") {
+    val size = 50
+    val data = dataGenerator.generateData(size)
+    assert(data.length == size, "The generated data should have the exact size")
   }
 
-  test("Generate data file with Large size") {
-    dataGenerator.generateData("LargeData", "Large")
-    val data = dataLoader.loadData("src/main/resources/data/LargeData.txt")
-    assert(data.length == 1000000)
+  test("Generate random string within size range") {
+    val minSize = 10
+    val maxSize = 100
+    val randomString = dataGenerator.generateString(minSize, maxSize)
+    assert(randomString.length >= minSize && randomString.length <= maxSize, "String should be within the specified size range")
   }
- 
-  test("Generate data file with specified length") {
-    dataGenerator.generateData("SpecifiedData", 12345)
-    val data = dataLoader.loadData("src/main/resources/data/SpecifiedData.txt")
-    assert(data.length == 12345)
+
+  test("Generate string data for each category") {
+    List("Toy", "Small", "Medium", "Large").foreach { category =>
+      val data = dataGenerator.generateStringData(category)
+      val sizes = dataGenerator.chooseSizeRange(category)
+      assert(data.length >= sizes._1 && data.length <= sizes._2, s"Generated string data for $category should be within size range")
+    }
   }
-   
-  test("Generate data file with negative length") {
-    dataGenerator.generateData("NegativeData", -12345)
-    val data = dataLoader.loadData("src/main/resources/data/NegativeData.txt")
-    assert(data.isEmpty)
-  }
-  
-  test("Generate data file with zero length") {
-    dataGenerator.generateData("ZeroData", 0)
-    val data = dataLoader.loadData("src/main/resources/data/ZeroData.txt")
-    assert(data.isEmpty)
-  }
+
 }
+
+
