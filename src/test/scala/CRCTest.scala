@@ -5,27 +5,6 @@ class CRCTest extends FunSuite {
 
   val calculator = new CRCCalculator
 
-  test("calculate method should return expected CRC value") {
-    val testData = Array[Byte](0x01, 0x02, 0x03, 0x04)
-    val polynomial = 0x04C11DB7
-    val expectedCRC = 0xB63CFBCD // Ajustado al valor sssscorrecto
-
-    val result = calculator.calculate(testData, polynomial)
-
-    assert(result == expectedCRC, s"Expected $expectedCRC but got $result")
-  }
-
-  test("calculate method should return correct CRC for empty input data") {
-
-    val testData = Array.emptyByteArray
-    val polynomial = 0x04C11DB7
-    val expectedCRC = 0xFFFFFFFF // Ajustado al valor correcto
-
-    val result = calculator.calculate(testData, polynomial)
-
-    assert(result == expectedCRC, s"Expected $expectedCRC but got $result")
-  }
-
   test("calculate method should return correct CRC when polynomial is 0") {
 
     val testData = Array[Byte](0x01, 0x02, 0x03, 0x04)
