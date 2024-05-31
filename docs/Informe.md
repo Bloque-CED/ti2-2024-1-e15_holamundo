@@ -64,14 +64,15 @@ Los puntos azules representan los tiempos de ejecución promedio para cada tama�
 ### C) Curva Analítica 
 Como ya sabemos que el algoritmo checksum tiene una complejidad lineal O(n), ajustamos una línea recta (función lineal) a los datos experimentales para ver como se compara con la complejidad teórica, para esto utilizamos la formula f(n) = a.n+b donde a y b son parámetros para determinar.
 
-(Gráfica 2)
+![Tiempo de Ejecución vs Tamaño de Entrada mas Curva Analitica](Grafica_2.png)
 
 Los puntos azules determinan los tiempos de ejecución promedio para cada tamaño de entrada, la línea roja punteada representa el ajuste lineal a los datos experimentales, obtenida mediante una regresión lineal. 
 Este ajuste lineal muestra que el tiempo de ejecución aumenta de manera aproximadamente lineal con el tamaño de la entrada, lo cual es equivalente a la complejidad teórica O(n). 
 
 
 ### D) Comparación con la Complejidad Teórica 
-(Gráfica 3)
+
+![Tiempo de Ejecución vs Tamaño de Entrada mas Cuerva Analitica y Comparacion con la Complejidad Teorica](Grafica_3.png)
 La línea verde continua que representa la complejidad teórica O(n) coincide con el ajuste lineal, confirmando que el algoritmo checksum sigue una complejidad lineal. Concluimos que el tiempo de ejecución aumenta linealmente con el tamaño de la entrada, consistente con la complejidad teórica O(n).
 
 ## Algoritmo CRC
