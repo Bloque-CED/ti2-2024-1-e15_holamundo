@@ -87,7 +87,7 @@ La clase `DataGenerator` proporciona métodos para generar datos aleatorios, út
 
 Esas funcionalidades son de gran importancia para poder realizar las pruebas y simulaciones cuando se proporciona datos de entrada de manera aleatoria, adaptándose a diferentes requisitos de tamaño.
 
-####COMPLEJIDAD DEL ALGORITMO
+#### COMPLEJIDAD DEL ALGORITMO 
 
 Para calcular su complejidad analizamos cada uno de los métodos o definiciones por separado: 
 
@@ -107,7 +107,7 @@ La complejidad total de este método es 𝑂(𝑛), donde n es el tamaño de la 
 
 La complejidad algorítmica total de los métodos en esta clase es O(n), indicando un tiempo de ejecución proporcional al tamaño de los datos generados.
 
-##Clase DataLoader
+## Clase DataLoader
 
 ## Clase Conver
 
@@ -115,7 +115,7 @@ La clase `Conver` contiene métodos para convertir datos entre diferentes format
 
 Los métodos creados pueden convertir una cadena de texto a representaciones binarias en su equivalente binario el cual es de 8 bits, o viceversa mente, ya que también convierte una cadena de texto en formato binario de 8 bits a su representación de texto original. De igual forma además de convertir cadenas de texto a representaciones binarias, las puede representar en ASCII decimal (formato digital de 3 dígitos), o en una representación Hexadecimal en mayúsculas
 
-####COMPLEJIDAD ALGORITMICA
+#### COMPLEJIDAD DEL ALGORITMO 
 
 -	`stringToBinary(str: String): String`
 La complejidad total de este método es 𝑂(𝑛), donde n es la longitud de la cadena `str`.
@@ -135,7 +135,7 @@ La complejidad de los métodos varía, siendo lineal O(n) para métodos que proc
 
 Nuestra clase ExecutionTimer es una herramienta útil para medir el tiempo de ejecución de bloques de código en nanosegundos, lo que facilita la optimización y evaluación del rendimiento en aplicaciones y algoritmos.
 
-####COMPLEJIDAD ALGORITMICA
+#### COMPLEJIDAD DEL ALGORITMO 
 
 Este método a pesar de que mide el tiempo de ejecución de un bloque de código, su complejidad algorítmica no depende del bloque de código en sí, sino de la operación de medición de tiempo, la cual es generalmente considerada como constante. En nuestra implementación utilizamos ‘System.nanoTime()’, lo cual se considera de complejidad 𝑂(1).
 
