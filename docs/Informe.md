@@ -1,48 +1,39 @@
-COMPUTACION Y ESTRUCTURAS DISCRETAS II
-TAREA INTEGRADORA FINAL
+# COMPUTACION Y ESTRUCTURAS DISCRETAS II
+## TAREA INTEGRADORA FINAL
 
-INTEGRANTES
-•	Damy Villegas – A00398942
-•	Juan Manuel Zuluaga – A00399738
-•	Juan Esteban Gómez – A00400293
+### INTEGRANTES
+- Damy Villegas – A00398942
+- Juan Manuel Zuluaga – A00399738
+- Juan Esteban Gómez – A00400293
 
-1)	ALGORITMO CHECKSUM 
-Este algoritmo es una técnica utilizada para verificar la integridad de datos transmitidos o almacenados,
-su objetivo principal es detectar errores en los datos. Esto se lo hace calculando un valor (el checksum) a partir 
-de los datos originales, para luego utilizarlos y comprobar si los datos han sido alterados o corrompidos.
+### 1) ALGORITMO CHECKSUM 
 
-En nuestro proyecto la clase que incorpora este algoritmo se llama ‘CheckSumCalculator’, la cual proporciona
-una manera de calcular y a la vez verificar checksums tanto para secuencias de bytes como para cadenas de texto.
-El proceso de calculo checksum implica sumar los valores de los bytes asegurándose que el resultado este dentro del
-rango de un byte. Su verificación se realiza comparando el checksum con un checksum previamente obtenido para determinar
-si los datos han sido alterados. 
+Este algoritmo es una técnica utilizada para verificar la integridad de datos transmitidos o almacenados, su objetivo principal es detectar errores en los datos. Esto se lo hace calculando un valor (el checksum) a partir de los datos originales, para luego utilizarlos y comprobar si los datos han sido alterados o corrompidos.
 
-COMPLEJIDAD DEL ALGORITMO 
+En nuestro proyecto la clase que incorpora este algoritmo se llama ‘CheckSumCalculator’, la cual proporciona una manera de calcular y a la vez verificar checksums tanto para secuencias de bytes como para cadenas de texto. El proceso de calculo checksum implica sumar los valores de los bytes asegurándose que el resultado este dentro del rango de un byte. Su verificación se realiza comparando el checksum con un checksum previamente obtenido para determinar si los datos han sido alterados. 
 
-Calculamos la complejidad de nuestro algoritmo en términos de 𝑂(𝑛), donde n es el tamaño de los datos de entrada, 
-esto lo hicimos para cada función definida en nuestro algoritmo: 
+#### COMPLEJIDAD DEL ALGORITMO 
 
-•	def calculate(data: Array[Byte]): Int = {} 
-Esta función recorre todos los elementos de un Array data, realizando una operación constante en cada uno. 
-La complejidad de esta función es 𝑂(𝑛), donde n es el numero de elementos que hay en data.
+Calculamos la complejidad de nuestro algoritmo en términos de 𝑂(𝑛), donde n es el tamaño de los datos de entrada, esto lo hicimos para cada función definida en nuestro algoritmo: 
 
-•	def calculateChecksum(data: String): Int = {}
-Esta función convierte una cadena en un array de bytes, lo cual tiene una complejidad de 𝑂(𝑛), donde n es la longitud 
-de la cadena data. 
+- `def calculate(data: Array[Byte]): Int = {}`
+  Esta función recorre todos los elementos de un Array data, realizando una operación constante en cada uno. La complejidad de esta función es 𝑂(𝑛), donde n es el numero de elementos que hay en data.
+  
+- `def calculateChecksum(data: String): Int = {}`
+  Esta función convierte una cadena en un array de bytes, lo cual tiene una complejidad de 𝑂(𝑛), donde n es la longitud de la cadena data.
+  
+- `def verifyChecksumCalculate(data: Array[Byte], checksum: Int): Boolean = {}`
+  La complejidad total de esta función es 𝑂(𝑛), donde 𝑛 es el número de elementos en data.
+  
+- `def verifyChecksumCalculateChecksum(data: String, checksum: Int): Boolean = {}`
+  La complejidad total de esta función es 𝑂(𝑛), donde 𝑛 es la longitud de la cadena data.
 
-•	def verifyChecksumCalculate(data: Array[Byte], checksum: Int): Boolean = {}
-La complejidad total de esta función es 𝑂(𝑛), donde 𝑛 es el número de elementos en data.
+En todas las funciones, la complejidad es lineal 𝑂(𝑛), donde 𝑛 representa el tamaño de los datos de entrada ya sea el número de bytes en un array o la longitud de una cadena.
 
-•	def verifyChecksumCalculateChecksum(data: String, checksum: Int): Boolean = {}
-La complejidad total de esta función es 𝑂(𝑛), donde 𝑛 es la longitud de la cadena data.
+#### MEDICION DEL TIEMPO DE EJECUCION 
 
-En todas las funciones, la complejidad es lineal 𝑂(𝑛), donde 𝑛 representa el tamaño de los datos de entrada ya sea
-el número de bytes en un array o la longitud de una cadena.
+Nosotros definimos unos valores específicos para poder calcular dicha medición, y al implementar nuestro código checksum, nos dio los siguientes resultados:
 
-MEDICION DEL TIEMPO DE EJECUCION 
-
-Nosotros definimos unos valores específicos para poder calcular dicha medición, y al implementar nuestro código
-checksum, nos dio los siguientes resultados:
 
 A) ORGANIZAMOS LOS DATOS EN UNA TABLA:
 
