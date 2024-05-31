@@ -10,3 +10,4 @@ class CheckSumCalculator {
     calculate(data.getBytes)
   }
 }
+
