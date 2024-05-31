@@ -57,7 +57,8 @@ Nosotros definimos unos valores específicos para poder calcular dicha medición
 
 # Resultados de Análisis de Algoritmos y Complejidad
 
-(GRAFICA 1)
+![Tiempo de Ejecución vs Tamaño de Entrada](Grafica_1.png)
+
 Los puntos azules representan los tiempos de ejecución promedio para cada tamaño de entrada. Observamos un aumento ligero del tiempo de ejecución conforme crece el tamaño de la entrada, lo cual es consistente con una complejidad lineal O(n).
 
 ### C) Curva Analítica 
