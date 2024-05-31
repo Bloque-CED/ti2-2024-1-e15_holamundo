@@ -2,12 +2,19 @@ package data
 import scala.util.Random
 
   class DataGenerator {
+
+    // Define each size range as a tuple
+    val toySizeRange: (Int, Int) = (1, 101)
+    val smallSizeRange: (Int, Int) = (102, 9999)
+    val mediumSizeRange: (Int, Int) = (10000, 99999)
+    val largeSizeRange: (Int, Int) = (100000, 999999)
+
     def generateData(size: Int): Array[Byte] = {
       val data = new Array[Byte](size)
       Random.nextBytes(data)
       data
     }
-
+    
     // Genera una cadena de caracteres con longitud variable dentro de un rango específico
     def generateString(minSize: Int, maxSize: Int): String = {
       val source = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
