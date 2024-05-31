@@ -6,7 +6,7 @@
 - Juan Manuel Zuluaga – A00399738
 - Juan Esteban Gómez – A00400293
 
-### 1) ALGORITMO CHECKSUM 
+### 1) Algoritmo CheckSum 
 
 Este algoritmo es una técnica utilizada para verificar la integridad de datos transmitidos o almacenados, su objetivo principal es detectar errores en los datos. Esto se lo hace calculando un valor (el checksum) a partir de los datos originales, para luego utilizarlos y comprobar si los datos han sido alterados o corrompidos.
 
@@ -35,7 +35,7 @@ En todas las funciones, la complejidad es lineal 𝑂(𝑛), donde 𝑛 represen
 Nosotros definimos unos valores específicos para poder calcular dicha medición, y al implementar nuestro código checksum, nos dio los siguientes resultados:
 
 
-A) ORGANIZAMOS LOS DATOS EN UNA TABLA:
+### A) Organizamos los datos en una tabla:
 
 | SIZE    | EXEC TIME1 (S) | EXEC TIME2 (S) | EXEC TIME3 (S) | EXEC TIME4 (S) | EXEC TIME5 (S) |
 |---------|----------------|----------------|----------------|----------------|----------------|
@@ -45,7 +45,7 @@ A) ORGANIZAMOS LOS DATOS EN UNA TABLA:
 | 100000  | 0.203          | 0.203          | 0.203          | 0.227          | 0.251          |
 | 1000000 | 0.266          | 0.266          | 0.251          | 0.290          | 0.313          |
 
-B) CALCULAMOS LOS PROMEDIOS, LO QUE DA RESULTADO A UNA NUEVA TABLA: 
+### B) Calculamos los promedios, lo que da lugar a una nueva tabla: 
 
 | SIZE    | EXEC TIME1 (S) | EXEC TIME2 (S) | EXEC TIME3 (S) | EXEC TIME4 (S) | EXEC TIME5 (S) | AVG EXEC TIME (S) |
 |---------|----------------|----------------|----------------|----------------|----------------|-------------------|
@@ -55,121 +55,91 @@ B) CALCULAMOS LOS PROMEDIOS, LO QUE DA RESULTADO A UNA NUEVA TABLA:
 | 100000  | 0.203          | 0.203          | 0.203          | 0.227          | 0.251          | 0.2174            |
 | 1000000 | 0.266          | 0.266          | 0.205          | 0.290          | 0.313          | 0.268             |
 
-La grafica calculada con Python nos da igual a: 
+# Resultados de Análisis de Algoritmos y Complejidad
 
-(Grafica 1) 
+(Gráfica 1)
+Los puntos azules representan los tiempos de ejecución promedio para cada tamaño de entrada. Observamos un aumento ligero del tiempo de ejecución conforme crece el tamaño de la entrada, lo cual es consistente con una complejidad lineal O(n).
 
-Los puntos azules representan los tiempos de ejecución promedio para cada tamaño de entrada. Podemos observar que
-el tiempo de ejecución va aumentando ligeramente a medida que aumente el tamaño de la entrada, lo cual es consistente
-con una complejidad lineal O(n).
+### C) Curva Analítica 
+Como ya sabemos que el algoritmo checksum tiene una complejidad lineal O(n), ajustamos una línea recta (función lineal) a los datos experimentales para ver como se compara con la complejidad teórica, para esto utilizamos la formula f(n) = a.n+b donde a y b son parámetros para determinar.
 
-C) CURVA ANALITICA 
+(Gráfica 2)
 
-Como ya sabemos que el algoritmo checksum tiene una complejidad lineal O(n), ajustamos una línea recta (función lineal)
-a los datos experimentales para ver como se compara con la complejidad teórica, para esto utilizamos la formula 
-f(n) = a.n+b donde a y b son parámetros para determinar.
+Los puntos azules determinan los tiempos de ejecución promedio para cada tamaño de entrada, la línea roja punteada representa el ajuste lineal a los datos experimentales, obtenida mediante una regresión lineal. 
+Este ajuste lineal muestra que el tiempo de ejecución aumenta de manera aproximadamente lineal con el tamaño de la entrada, lo cual es equivalente a la complejidad teórica O(n). 
 
-(Grafica 2)
 
-Los puntos azules determinan los tiempos de ejecución promedio para cada tamaño de entrada, la línea roja punteada
-representa el ajuste lineal a los datos experimentales, obtenida mediante una regresión lineal. 
+### D) Comparación con la Complejidad Teórica 
+(Gráfica 3)
+La línea verde continua que representa la complejidad teórica O(n) coincide con el ajuste lineal, confirmando que el algoritmo checksum sigue una complejidad lineal. Concluimos que el tiempo de ejecución aumenta linealmente con el tamaño de la entrada, consistente con la complejidad teórica O(n).
 
-Este ajuste lineal muestra que el tiempo de ejecución aumenta de manera aproximadamente lineal con el tamaño de la
-entrada, lo cual es equivalente a la complejidad teórica O(n). 
+## Algoritmo CRC
+## Clase DataGemerator
 
-D) COMPARAR CON LA COMPLEJIDAD TEORICA 
+La clase `DataGenerator` proporciona métodos para generar datos aleatorios, útiles para pruebas y simulaciones. Sus funciones incluyen:
 
-(Grafica 3) 
+- Generación de Arrays de Bytes Aleatorios
+- Generación de Cadenas de Texto Aleatorias
+- Rangos de Tamaño Basados en Categorías
+- Generación de Datos de Texto en Formato Byte
 
-La línea Verde continua que representa la complejidad teórica O(n) muestra una tendencia similar a la del ajuste lineal,
-dicha coincidencia confirma que el comportamiento del algoritmo checksum sigue una complejidad lineal.
+Esas funcionalidades son de gran importancia para poder realizar las pruebas y simulaciones cuando se proporciona datos de entrada de manera aleatoria, adaptándose a diferentes requisitos de tamaño.
 
-Como conclusión tenemos que el análisis confirma que el tiempo de ejecución del algoritmo checksum aumenta de manera
-lineal con el tamaño de la entrada, lo cual es consistente con la complejidad teórica O(n). 
-
-2)	ALGORITMO CRC
-3)	CLASE DATAGENERATOR 
-
-Esta clase proporciona diferentes métodos para generar datos aleatorios, ya se en forma de secuencias de bytes como 
-en cadenas de texto útiles para pruebas y simulaciones. Sus principales funciones incluyen: 
-
-•	Generación de Arrays de Bytes Aleatorios: Permite crear arrays de bytes de tamaño específico llenos de valores
-aleatorios.
-
-•	Generación de Cadenas de Texto Aleatorias: Crea cadenas alfanuméricas de longitud variable dentro de un rango
-especificado.
-
-•	Rangos de Tamaño Basados en Categorías: Define rangos de tamaño preestablecidos para diferentes categorías como 
-"Toy", "Small", "Medium" y "Large".
-
-•	Generación de Datos de Texto en Formato Byte: Genera cadenas de texto aleatorias basadas en una categoría
-y las convierte en arrays de bytes.
-
-Esas funcionalidades son de gran importancia para poder realizar las pruebas y simulaciones cuando se proporciona 
-datos de entrada de manera aleatoria, adaptándose a diferentes requisitos de tamaño.
-
-COMPLEJIDAD DEL ALGORITMO
+####COMPLEJIDAD DEL ALGORITMO
 
 Para calcular su complejidad analizamos cada uno de los métodos o definiciones por separado: 
 
-•	def generateData(size: Int): Array[Byte] = {}
-La complejidad total de este método es 𝑂(𝑛), donde n es el tamaño del array ‘size’.
+-	`def generateData(size: Int): Array[Byte] = {}`
+La complejidad total de este método es 𝑂(𝑛), donde n es el tamaño del array `size`.
 
-•	def generateString(minis: Int, maxSize: Int): String = {}
+-	`def generateString(minis: Int, maxSize: Int): String = {}`
 La complejidad es 𝑂(𝑛), donde n es el tamaño de la cadena generada. 
 
-•	def chooseSizeRange(category: String): (Int, Int) = {}
-Este método verifica la categoría y devuelve un par de enteros, estas operaciones son constantes, por lo que
-su complejidad total es 𝑂(1).
+-	`def chooseSizeRange(category: String): (Int, Int) = {}`
+Este método verifica la categoría y devuelve un par de enteros, estas operaciones son constantes, por lo que su complejidad total es 𝑂(1).
 
-•	def generateStringData(category: String): Array[Byte] = {}
+-	`def generateStringData(category: String): Array[Byte] = {}`
 La complejidad total de este método es 𝑂(𝑛), donde n es el tamaño de la cadena generada.
 
-La complejidad algorítmica total de los métodos en la clase DataGenerator es 𝑂(𝑛), donde 𝑛 es el tamaño 
-de los datos generados (ya sea el tamaño del array de bytes o la longitud de la cadena de texto). Esta complejidad 
-lineal es la más alta entre los métodos, indicando que el tiempo de ejecución crece proporcionalmente con el tamaño 
-de los datos de entrada.
 
-4)	CLASE DATALOADER 
-5)	CLASE CONVER 
 
-Nuestra Clase ‘conver’ contiene diferentes métodos para convertir datos entre diferentes formatos, específicamente 
-entre cadenas de texto, Representaciones Binarias, ASCII y Hexadecimal.
+La complejidad algorítmica total de los métodos en esta clase es O(n), indicando un tiempo de ejecución proporcional al tamaño de los datos generados.
 
-Los métodos creados pueden convertir una cadena de texto a representaciones binarias en su equivalente binario el 
-cual es de 8 bits, o viceversa mente, ya que también convierte una cadena de texto en formato binario de 8 bits a
-su representación de texto original. De igual forma además de convertir cadenas de texto a representaciones binarias, 
-las puede representar en ASCII decimal (formato digital de 3 dígitos), o en una representación Hexadecimal en mayúsculas. 
+##Clase DataLoader
 
-COMPLEJIDAD ALGORITMICA 
+## Clase Conver
 
-•	stringToBinary(str: String): String
-La complejidad total de este método es 𝑂(𝑛), donde n es la longitud de la cadena ‘str’. 
+La clase `Conver` contiene métodos para convertir datos entre diferentes formatos, como cadenas de texto, representaciones binarias, ASCII y hexadecimal. 
 
-•	binaryToString(binary: String): String
-La complejidad total de este método es 𝑂(𝑛), donde n es la longitud de la cadena ‘binary’.
+Los métodos creados pueden convertir una cadena de texto a representaciones binarias en su equivalente binario el cual es de 8 bits, o viceversa mente, ya que también convierte una cadena de texto en formato binario de 8 bits a su representación de texto original. De igual forma además de convertir cadenas de texto a representaciones binarias, las puede representar en ASCII decimal (formato digital de 3 dígitos), o en una representación Hexadecimal en mayúsculas
 
-•	stringToAscii(inputString: String): String
-La complejidad total de este método es 𝑂(𝑛), donde n es la longitud de la cadena ‘inputString’.
+####COMPLEJIDAD ALGORITMICA
 
-•	decimalToHex(decimal: Int): String
-La complejidad total del algoritmo es de 𝑂(1), porque cuando se convierte una cadena a mayúsculas se opera sobre
-una cadena de longitud fija, además de ser una cadena hexadecimal, es decir que es una operación constante puesto
-que el tamaño del entero es constante.
+-	`stringToBinary(str: String): String`
+La complejidad total de este método es 𝑂(𝑛), donde n es la longitud de la cadena `str`.
 
-La complejidad de los métodos de la clase ‘Conver’ es lineal 𝑂(𝑛) para los métodos que procesan cadenas y constante
-𝑂(1) para el método que convierte un numero decimal a hexadecimal. 
+-	`binaryToString(binary: String): String`
+La complejidad total de este método es 𝑂(𝑛), donde n es la longitud de la cadena `binary`.
 
-6)	CLASE EXECUTIONTIMER
-Nuestra clase ExecutionTimer es una herramienta útil para medir el tiempo de ejecución de bloques de código en 
-nanosegundos, lo que facilita la optimización y evaluación del rendimiento en aplicaciones y algoritmos.
+-	`stringToAscii(inputString: String): String`
+La complejidad total de este método es 𝑂(𝑛), donde n es la longitud de la cadena `inputString`.
 
-COMPLEJIDAD ALGORITMICA
+-	`decimalToHex(decimal: Int): String`
+La complejidad total del algoritmo es de 𝑂(1), porque cuando se convierte una cadena a mayúsculas se opera sobre una cadena de longitud fija, además de ser una cadena hexadecimal, es decir que es una operación constante puesto que el tamaño del entero es constante.
 
-Este método a pesar de que mide el tiempo de ejecución de un bloque de código, su complejidad algorítmica no depende
-del bloque de código en sí, sino de la operación de medición de tiempo, la cual es generalmente considerada como constante. En nuestra implementación utilizamos ‘System.nanoTime()’, lo cual se considera de complejidad 𝑂(1).
-Por lo tanto, la complejidad algorítmica de este método es 𝑂(1), ya que la operación de medición del tiempo no depende
-del tamaño del bloque de código o, de entrada.  
+La complejidad de los métodos varía, siendo lineal O(n) para métodos que procesan cadenas y constante O(1) para el método de conversión de decimal a hexadecimal.
+
+## Clase ExecutionTimer
+
+Nuestra clase ExecutionTimer es una herramienta útil para medir el tiempo de ejecución de bloques de código en nanosegundos, lo que facilita la optimización y evaluación del rendimiento en aplicaciones y algoritmos.
+
+####COMPLEJIDAD ALGORITMICA
+
+Este método a pesar de que mide el tiempo de ejecución de un bloque de código, su complejidad algorítmica no depende del bloque de código en sí, sino de la operación de medición de tiempo, la cual es generalmente considerada como constante. En nuestra implementación utilizamos ‘System.nanoTime()’, lo cual se considera de complejidad 𝑂(1).
+
+Por lo tanto, la complejidad algorítmica de este método es 𝑂(1), ya que la operación de medición del tiempo no depende del tamaño del bloque de código o, de entrada.  
+
+
 
 
 
