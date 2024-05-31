@@ -7,5 +7,4 @@ class ExecutionTimer {
     val end = System.nanoTime()
     (result, end - start)
   }
-
 }
