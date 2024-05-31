@@ -109,6 +109,17 @@ La complejidad algorítmica total de los métodos en esta clase es O(n), indican
 
 ## Clase DataLoader
 
+Determinamos la complejidad de la clase `DataLoader` analizando cada metodo individualmente:
+
+- `loadTextFile(fileName: String):`
+La complejidad de este método depende del tamaño del archivo que se está cargando. Si el tamaño del archivo es proporcional al tamaño de entrada, la complejidad de este método sería O(n), donde n es el tamaño del archivo.
+
+- `loadAllTextFiles():`
+La complejidad de este metodo depende de la cantidad de archivos y del tamaño de cada archivo en la carpeta, por ejemplo si tenemos `m` archivos en la carpeta y el total de todos los archivos es `n`, entonces la complejidad de el metodo seria O(m*n), donde n es el tamaño de cada archivo.
+
+- `saveToTextFile(fileName: String, array: Array[String]):`
+Este metodo como guarda un array de strings en un archivo de texto, la complejidad del metodo depende del tamaño del array (k). Por tal razon la complejidad seria O(k).
+ 
 ## Clase Conver
 
 La clase `Conver` contiene métodos para convertir datos entre diferentes formatos, como cadenas de texto, representaciones binarias, ASCII y hexadecimal. 
