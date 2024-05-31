@@ -4,11 +4,6 @@ import scala.util.Random
 
 class DataGenerator {
 
-  val toySizeRange: (Int, Int) = (1, 101)
-  val smallSizeRange: (Int, Int) = (102, 9999)
-  val mediumSizeRange: (Int, Int) = (10000, 99999)
-  val largeSizeRange: (Int, Int) = (100000, 999999)
-
   def generateData(size: Int): Array[Byte] = {
     val data = new Array[Byte](size)
     Random.nextBytes(data)
@@ -37,3 +32,15 @@ class DataGenerator {
     randomString.getBytes("UTF-8")
   }
 }
+
+//def generateStringData(category: String): Array[Byte] = {
+//  val (minSize, maxSize) = chooseSizeRange(category)
+// val randomString = generateString(minSize, maxSize)
+//  randomString.getBytes // sin especificar la codificación
+//}
+
+//def generateData(size: Int): Array[Byte] = {
+//  val data = new Array[Byte](size)
+//  (0 until size).foreach(i => data(i) = (Math.random() * 256).toByte)
+//  data
+//}
