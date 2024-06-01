@@ -17,3 +17,14 @@ Presentado por los Estudiantes:
 | Juan Manuel Zuluaga  |A00399738|
 | Juan Esteban Gómez   |A00400293|
 
+Indicadores de calidad (Ultimos 10 commits)
+
+→ Densidad de errores-fallos =  total de fallos / total de pruebas = 0.29
+→ Confiabilidad =  1 - densidad de fallos = 0.71
+→ Completitud = casos de prueba / total funcionalidades = 4.7
+
+Interpretación:
+→ La densidad de errores-fallos 0.29, lo que indica un porcentaje más bajo de pruebas fallidas.
+→ La confiabilidad 0.71, lo que sugiere calidad y confiabilidad del código.
+→ La completitud no alcanza el valor objetivo de 5, sin embargo alcanza un valor cercanno de 4.7 lo que significa una cobertura casi ideal de las funcionalidades principales según lo esperado al final de la implementación del producto.
+ 
