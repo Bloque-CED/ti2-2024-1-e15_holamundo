@@ -1,27 +1,41 @@
 package Main
 
-import algorithms.CheckSumCalculator
-import data.{Conver, DataGenerator, DataLoader, ExecutionTimer}
+import algorithms.*
+import data.*
 import java.io.FileWriter
 import java.io.BufferedWriter
 import scala.collection.mutable.ArrayBuffer
 
+/**
+ * The MainCheckSum object is responsible for generating data, calculating checksums, and recording execution times.
+ */
 object MainCheckSum {
-  def main(args: Array[String]): Unit = {
-    // Initialize variables
-    val categories = Array("Toy", "Small", "Medium", "Large") // Array of categories for data generation
-    val timeList = ArrayBuffer[Double]() // Array to store execution times
-    val startTime = System.currentTimeMillis() // Record the starting time
 
+  /**
+   * The main method that executes the checksum generation and recording process.
+   *
+   * @param args the command-line arguments (not used)
+   */
+  def main(args: Array[String]): Unit = {
+
+    // Initialize variables
+    val categories = Array("Toy", "Small", "Medium", "Large") 
+    val timeList = ArrayBuffer[Double]() 
+    val startTime = System.currentTimeMillis() 
+
+    
     // Create instances of necessary classes
     val checksumCalculator = new CheckSumCalculator
     val dataGenerator = new DataGenerator
     val converter = new Conver
-    val dataLoader = new DataLoader
+    val dataFolderPath = "dataLoad" 
+    val dataLoader = new DataLoader(dataFolderPath)
     val executionTimer = new ExecutionTimer
 
+    
     // Loop through each category and generate data
     categories.foreach(category => {
+      
       // Generate data based on the category
       val data = dataGenerator.generateStringData(category)
 
@@ -33,7 +47,11 @@ object MainCheckSum {
 
       // Add the time and checksum to their respective lists
       timeList += time
-      println(s"Category: $category, Checksum: $checksum, Execution Time: $time seconds")
+      println(s"Category: $category, Checksum: $checksum, Execution Time: $time milliseconds")
+
+      // Save data to text file
+      val fileName = s"$category.txt"
+      dataLoader.saveToTextFile(fileName, Array(new String(data)))
     })
 
     // Save the time data to a file
