@@ -19,7 +19,6 @@ class Conver {
   }
   
 
-
   /**
    * Converts a binary string to its text representation.
    *

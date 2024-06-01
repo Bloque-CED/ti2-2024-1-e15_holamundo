@@ -33,6 +33,7 @@ class CRCCalculator {
     else dividend.substring(1)
   }
 
+
   /**
    * Verifies the integrity of the data using the provided CRC checksum and generator polynomial.
    *
@@ -41,9 +42,10 @@ class CRCCalculator {
    * @param generator the generator polynomial string used for the CRC calculation
    * @return true if the calculated CRC checksum matches the provided checksum, false otherwise
    */
-  def verify(data: String, checksum: String, generator: String): Boolean = {
-    calculate(data + checksum, generator).forall(_ == '0')
-  }
+    def verify(data: String, checksum: String, generator: String): Boolean = {
+      calculate(data + checksum, generator).forall(_ == '0')
+    }
+
 
   /**
    * Calculates the CRC checksum for a given byte array using a specified generator polynomial.
@@ -73,6 +75,8 @@ class CRCCalculator {
     else dividend.tail
   }
 
+
+
   /**
    * Verifies the integrity of the data using the provided CRC checksum and generator polynomial.
    *
@@ -81,7 +85,8 @@ class CRCCalculator {
    * @param generator the generator polynomial byte array used for the CRC calculation
    * @return true if the calculated CRC checksum matches the provided checksum, false otherwise
    */
-  def verifyBytes(data: Array[Byte], checksum: Array[Byte], generator: Array[Byte]): Boolean = {
-    calculateBytes(data ++ checksum, generator).forall(_ == 0)
+    def verifyBytes(data: Array[Byte], checksum: Array[Byte], generator: Array[Byte]): Boolean = {
+      calculateBytes(data ++ checksum, generator).forall(_ == 0)
+    }
   }
-}
+
