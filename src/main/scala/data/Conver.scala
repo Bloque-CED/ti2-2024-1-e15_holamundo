@@ -17,6 +17,7 @@ class Conver {
   def stringToBinary(str: String): String = {
     str.flatMap(char => String.format("%8s", Integer.toBinaryString(char)).replace(' ', '0'))
   }
+  
 
 
   /**

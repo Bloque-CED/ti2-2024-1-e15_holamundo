@@ -62,14 +62,14 @@ class CRCCalculator {
     }
 
     for (i <- k until appendedData.length) {
-      if (dividend.head == 1) {
+      if (dividend.head == 1.toByte) {
         dividend = xor(dividend, generator) ++ Array(appendedData(i))
       } else {
         dividend = dividend.tail ++ Array(appendedData(i))
       }
     }
 
-    if (dividend.head == 1) xor(dividend, generator).tail
+    if (dividend.head == 1.toByte) xor(dividend, generator).tail
     else dividend.tail
   }
 
