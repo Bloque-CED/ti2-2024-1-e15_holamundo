@@ -210,18 +210,44 @@ Este método a pesar de que mide el tiempo de ejecución de un bloque de código
 
 Por lo tanto, la complejidad algorítmica de este método es 𝑂(1), ya que la operación de medición del tiempo no depende del tamaño del bloque de código o, de entrada.  
 
+RESPUESTAS A LAS PREGUNTAS:
+
+### ¿Hay algún patrón discernible en la relación entre el tamaño de la entrada y el tiempo de ejecución?
+
+CHECKSUM
+- Patrón Observado: A medida que el tamaño de la entrada aumenta, el tiempo de ejecución también aumenta de manera lineal. Esto se debe a la complejidad lineal 𝑂(𝑛) del algoritmo, que implica que el tiempo de ejecución es directamente proporcional al número de elementos en la entrada.
+  
+- Confirmación con Gráfica: La gráfica de "Tiempo de Ejecución vs Tamaño de Entrada" muestra un incremento lineal en el tiempo de ejecución conforme crece el tamaño de la entrada, lo cual coincide con la complejidad teórica 𝑂(𝑛).
+
+CRC
+- Patrón Observado: Similar al algoritmo CheckSum, el tiempo de ejecución del algoritmo CRC incrementa de manera lineal conforme aumenta el tamaño de la entrada. Esto es consistente con la complejidad lineal 𝑂(𝑛), donde el tiempo de ejecución es proporcional al número de bytes procesados.
+  
+- Confirmación con Gráfica: La relación lineal indicada por los datos sugiere un comportamiento similar al de CheckSum, confirmando la complejidad teórica 𝑂(𝑛).
+  
+En conclusión, Ambos algoritmos, CheckSum y CRC, muestran un patrón claro y discernible donde el tiempo de ejecución aumenta linealmente con el tamaño de la entrada.
+
+### ¿Qué tipo de relación parece existir entre el tamaño de la entrada y el tiempo de ejecución? (lineal, cuadrática, exponencial, etc.)
+
+Tanto para el algoritmo CheckSum como el algoritmo CRC, su relacion entre el tamaño y el tiempo de ejecucion es lineal. 
+
+### ¿Qué función se ajusta mejor a los datos experimentales? (lineal, cuadrática, exponencial, etc.)
+
+Tanto para la grafica del algoritmo Checksum como el CRC, en la grafica "Tiempo de Ejecucion vs Tamaño de Entrada", muestran un incremento lineal de la forma f(n)=a⋅n+b, asi que nuestro analisis es que la funcion lineal se ajusta de una mejor forma a los datos experimentales en Checksum y en CRC
+
+### ¿Cómo se compara la función de ajuste con la complejidad teórica del algoritmo?
+
+El algoritmo Checksum y el algoritmo CRC comparten similitudes en cuanto a su complejidad teórica y su comportamiento práctico. Ambos presentan una complejidad teórica de O(n), donde n es el tamaño de la entrada, lo que implica que su tiempo de ejecución aumenta de manera proporcional al tamaño de los datos de entrada.
+
+Este comportamiento se confirma mediante datos experimentales, que muestran un incremento lineal en el tiempo de ejecución a medida que crece el tamaño de la entrada. La función de ajuste a estos datos se modela de manera lineal, lo que coincide con la complejidad teórica esperada.
+
+En resumen, tanto la teoría como la práctica demuestran que tanto el algoritmo Checksum como el algoritmo CRC operan de manera eficiente y predecible, con un tiempo de ejecución que crece de forma lineal con el tamaño de la entrada.
+
+### ¿La complejidad teórica del algoritmo predice adecuadamente el tiempo de ejecución observado en los datos experimentales?
+
+En ambos casos, la complejidad teórica O(n) proporciona una predicción adecuada y precisa del tiempo de ejecución observado en los datos experimentales. La función de ajuste lineal f(n)=a⋅n+b, obtenida a partir de los resultados experimentales, confirma que el tiempo de ejecución de los algoritmos CheckSum y CRC aumenta linealmente con el tamaño de la entrada, tal como lo predice la complejidad teórica. Esto demuestra la validez y precisión de la complejidad teórica en la descripción del rendimiento temporal de estos algoritmos.
 
 
+### ¿Hay algún tamaño de entrada para el cual el algoritmo exhiba un comportamiento inusual en términos de tiempo de ejecución?
 
-
-
-
-
-
-
-
-
-
-
-
+Segun los datos obtenidos no parece haber un tamaño de entrada para el cual el algoritmo presente un comportamiento inusual en los terminos de ejecución.
 
