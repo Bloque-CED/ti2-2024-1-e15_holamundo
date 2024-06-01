@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bcf14dc1-cf45-428f-8621-577e3e370fef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checksum_times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checksum_times.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crc_times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crc_times.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/algorithms/CRCCalculator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/algorithms/CRCCalculator.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +192,7 @@
       <workItem from="1717129399520" duration="1852000" />
       <workItem from="1717131542650" duration="1327000" />
       <workItem from="1717133000913" duration="4779000" />
-      <workItem from="1717140017488" duration="20179000" />
+      <workItem from="1717140017488" duration="21746000" />
     </task>
     <servers />
   </component>
