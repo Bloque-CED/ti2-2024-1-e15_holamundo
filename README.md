@@ -27,7 +27,7 @@ Indicadores de calidad (Ultimos 10 commits)
 
 Interpretación:
 
-→ La densidad de errores-fallos 0.29, lo que indica un porcentaje más bajo de pruebas fallidas.
+→ La densidad de errores-fallos 0.29, lo que indica un porcentaje bajo de pruebas fallidas.
 
 → La confiabilidad 0.71, lo que sugiere calidad y confiabilidad del código.
 
