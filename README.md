@@ -14,6 +14,6 @@ Presentado por los Estudiantes:
 | Estudiantes           | Codigo |
 |----------------------|---------|
 | Damy Villegas        |A00398942|
-|                      |         |
-|                      |         |
-|                      |         |
+| Juan Manuel Zuluaga  |A00399738|
+| Juan Esteban Gómez   |A00400293|
+
